@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Feed } from './components/Feed/Feed';
 import { NavBar } from './components/NavBar/NavBar';
 import { SearchBar } from './components/SearchBar/SearchBar';
 import { FiltersBar } from './features/filter/FiltersBar';
@@ -11,6 +12,7 @@ function App() {
       <SearchBar/>
       <hr style={{marginTop:"20px",width:"20%"}}/>
       <FiltersBar/>
+      <Feed/>
     </div>
   );
 }
