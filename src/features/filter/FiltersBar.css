@@ -1,0 +1,26 @@
+.FiltersBar{
+    margin:0 auto;
+    width:30%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+
+ul {
+    list-style: none;
+    padding:0;
+}
+li {
+    display: inline-block;
+    margin-right: 15px;
+}
+.hidden {
+    visibility:hidden;
+}
+label {
+    cursor: pointer;
+}
+input:checked + label {
+    background: red;
+}
