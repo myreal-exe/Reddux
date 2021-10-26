@@ -1,4 +1,52 @@
 .Post{
-    background-color: RED;
-    height:200px
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    width: 600px;
+    margin-top: 50px;
+}
+/* VOTES */
+.votes{
+    width:40px;
+    min-width:40px;
+
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.score{
+    margin: 10px auto;
+}
+.upvote-icon{
+    padding-top: 10px;
+    width:25px;
+}
+.downvote-icon{
+    padding-bottom: 10px;
+    width:25px;
+
+}
+
+/* CONTENT */
+.content{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+/* HEADER */
+
+.author-name{
+    margin:0;
+    padding-top:14px;
+    padding-left: 14px;
+}
+.title{
+    margin:10px auto;
+    padding-left: 14px;
+}
+
+/* IMG */
+.preview-img{
+    max-width: 500px;
 }
