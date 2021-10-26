@@ -1,8 +1,10 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
 export const loadData = createAsyncThunk(
-    'feedData/loadData',
+    'feedData/getLoadData',
     async (url,thunkAPI)=> {
+        
+        
         const response = await fetch(url);
         const jsonResponse = await response.json();
         return jsonResponse;
@@ -13,25 +15,28 @@ export const feedDataSlice = createSlice({
     initialState:{
         isLoading:true,
         hasError:false,
-        feedData:{}
+        feedData:{},
+        accessToken:'',
+        expiresIn:0
     },
     reducers:{
         
     },
 
-    extraReducer:{
+    extraReducers:{
         [loadData.pending]:(state,action)=>{
             state.isLoading=true;
             state.hasError=false;
         },
         [loadData.fulfilled]:(state,action)=>{
+            
             console.log(action.payload);
-            console.log("fwWF");
 
 
             state.feedData=action.payload;
             state.isLoading=false;
             state.hasError=false;
+            
         },
         [loadData.rejected]:(state,action)=>{
             
